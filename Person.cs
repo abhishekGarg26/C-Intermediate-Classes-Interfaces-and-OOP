@@ -8,9 +8,27 @@ namespace Classes
 {
     public class Person
     {
-        public string Name;
+        public DateTime Birthdate { get; private set; }
+        public string Name { get; set; }
+        public string UserName { get; set; }
 
-        public DateTime Birthdate { get; set; }
+        public Person(DateTime birthdate)
+        {
+            Birthdate = birthdate;
+        }
+
+        //public string Name;
+
+
+        public int Age
+        {
+            get
+            {
+                var timeSpan = DateTime.Today - Birthdate;
+                var years = timeSpan.Days / 365;
+                return years;
+            }
+        }
 
         /*private DateTime _birthdate;
 
@@ -31,11 +49,11 @@ namespace Classes
             Console.WriteLine("Hi {0}, I am {1}", to, Name);
         }
 
-        public static Person Parse(string str)
+       /* public static Person Parse(string str)
         {
             var person = new Person();
             person.Name = str;
             return person;
-        }
+        }*/
     }
 }

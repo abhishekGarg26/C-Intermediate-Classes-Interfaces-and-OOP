@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Classes
 {
-    
     class Program
     {
         static void Main(string[] args)
@@ -75,11 +73,70 @@ namespace Classes
             customer.Promote();
 
             Console.WriteLine(customer.Orders.Count);
+           
+
+            var person = new Person();
+            person.SetBirthdate(new DateTime(1982, 1, 1));
+            Console.WriteLine(person.GetBirthdate());
+            
+
+            var person = new Person(new DateTime(2001, 9, 26));
+            Console.WriteLine(person.Age);
+            
+
+            var cookie = new HttpCookie();
+            cookie["name"] = "Mosh";
+            Console.WriteLine(cookie["name"]);
+            
+
+            try
+            {
+                var stopwatch = new Stopwatch();
+
+                while (true)
+                {
+                    Console.WriteLine("Please select one option to perform action with stopwatch: \n 1.Start \n 2.Stop \n 3.Exit");
+                    var res = Console.ReadLine();
+                    if (res.ToLower() == "exit") break;
+                    Console.WriteLine(stopwatch.Run(res));
+                }
+                
+
+
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("The operation is Invalid..!"); ;
+            }
+            
+
+            var newPost = new Post();
+            while (true)
+            {
+                Console.WriteLine("Please select a option number to upvote " +
+                    "and downvote or exit to view vote count" +
+                    ":\n1.Upvote\n2.Downvote\n3.Exit");
+                var vote=Console.ReadLine();
+                if (int.Parse(vote)==3) break;
+                newPost.voteCount(int.Parse(vote));
+            }
+            Console.WriteLine("Post Details are:\n"+"Title: "+newPost.Title+"\nDescription: "+newPost.Desc+"\nDateTime: "+newPost.DateTimeCreate+'\n');
+            Console.WriteLine("Total Votes are: "+(newPost.Upvote-newPost.Downvote));
+            
+
+            var text = new Text();
+            text.Width = 100;
+            text.Copy();
             */
 
-           /* var person = new Person();
-            person.SetBirthdate(new DateTime(1982, 1, 1));
-            Console.WriteLine(person.GetBirthdate());*/
+            var dbMigrator = new DbMigrator(new Logger());
+
+            var logger = new Logger();
+            var installer = new Installer(logger);
+
+            dbMigrator.Migrate();
+            installer.Install();
 
         }
     }
