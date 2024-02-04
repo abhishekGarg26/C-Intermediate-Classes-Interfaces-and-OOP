@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Classes
 {
@@ -128,7 +131,7 @@ namespace Classes
             var text = new Text();
             text.Width = 100;
             text.Copy();
-            */
+            
 
             var dbMigrator = new DbMigrator(new Logger());
 
@@ -138,6 +141,63 @@ namespace Classes
             dbMigrator.Migrate();
             installer.Install();
 
+            
+
+            var customer = new Customer();
+            Amazon.RateCalculator calculator = new RateCalculator();
+            
+
+            var car = new Car("XYZ1234");
+            
+
+            Text1 text = new Text1();
+             Shape shape = text;
+
+             text.Width = 200;
+             shape.Width = 100;
+
+             System.Console.WriteLine(text.Width);
+ 
+
+            StreamReader reader = new StreamReader(new MemoryStream());
+            
+            var list = new ArrayList();
+            list.Add(1);
+            list.Add("Mosh");
+            list.Add(new Text1());
+
+            var anotherList = new List<Shape>();
+            
+
+            Shape shape = new Text1();
+            Text1 text = (Text1)shape;
+            
+
+            var list = new ArrayList();
+            list.Add(1);
+            list.Add("Mosh");
+            list.Add(DateTime.Today);
+
+            var number = (int)list[1];
+
+
+            var anotherList = new List<int>();
+            var names = new List<string>();
+            */
+
+            var stack = new Stack();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(null);
+
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            stack.Clear();
+
+        
         }
     }
 }
