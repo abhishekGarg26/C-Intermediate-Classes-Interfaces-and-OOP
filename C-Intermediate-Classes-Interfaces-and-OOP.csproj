@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,6 +7,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\abhishekGarg26\C-Intermediate-Classes-Interfaces-and-OOP\Amazon\Amazon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Classes">
+      <HintPath>bin\Debug\net5.0\Classes.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

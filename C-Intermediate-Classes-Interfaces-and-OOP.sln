@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.34301.259
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classes", "Classes.csproj", "{5D75B91A-1E01-49E3-BC6E-8E694DC399C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C-Intermediate-Classes-Interfaces-and-OOP", "C-Intermediate-Classes-Interfaces-and-OOP.csproj", "{5D75B91A-1E01-49E3-BC6E-8E694DC399C7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon", "..\abhishekGarg26\C-Intermediate-Classes-Interfaces-and-OOP\Amazon\Amazon.csproj", "{599B8825-0915-4358-9A3D-CADC0341A182}"
 EndProject
